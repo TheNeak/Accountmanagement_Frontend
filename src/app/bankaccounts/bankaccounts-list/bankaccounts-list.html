@@ -1,0 +1,20 @@
+<h2 class="page-header">Bankkonten</h2>
+
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>AccountNr</th>
+      <th>Money</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let bankaccount of bankaccounts">
+      <td>{{bankaccount.id}}</td>
+      <td>{{bankaccount.accountNr}}</td>
+      <td>{{bankaccount.money}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
