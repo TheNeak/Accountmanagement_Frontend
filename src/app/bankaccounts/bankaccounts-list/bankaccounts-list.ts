@@ -15,7 +15,7 @@ export class BankaccountsList {
   }
 
   public loadAllBankaccounts() {
-    this._bankaccountsService.getAllBankaccounts()
+    this._bankaccountsService.getAllBankAccounts()
       .subscribe(
         data => this.bankaccounts = data,
         error => console.log("ERROR in REST API")
