@@ -9,7 +9,7 @@ export class AppService {
   private bankAccountUrl;
 
   constructor(private _http: Http) {
-    this.bankAccountUrl = this.configuration.ServerWithApiUrl + "/transactions";
+    this.bankAccountUrl = this.configuration.ServerWithApiUrl + "transactions";
   }
 
   getAllBankAccounts() {
