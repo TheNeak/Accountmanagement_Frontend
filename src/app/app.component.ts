@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from "@angular/core";
+import {AppService} from "app.service";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+  private bankaccounts = [];
+  private logs = "";
+
+  constructor(private _bankaccountsService: AppService) {
+    this._bankaccountsService = _bankaccountsService;
+    this.loadAllBankaccounts();
+  }
+
+  public loadAllBankaccounts() {
+    this._bankaccountsService.getAllBankAccounts()
+      .subscribe(
+        data => this.bankaccounts = data,
+        error => console.log("ERROR in REST API")
+      );
+  }
 }
