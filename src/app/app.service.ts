@@ -4,7 +4,7 @@ import {Configuration} from "app.constants";
 import {Observable} from "rxjs/Rx";
 
 @Injectable()
-export class BankaccountsService {
+export class AppService {
   private configuration = new Configuration();
   private bankaccountUrl;
 
