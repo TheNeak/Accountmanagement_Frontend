@@ -6,18 +6,18 @@ import {Observable} from "rxjs/Rx";
 @Injectable()
 export class AppService {
   private configuration = new Constants();
-  private bankaccountUrl;
+  private bankAccountUrl;
 
   constructor(private _http: Http) {
-    this.bankaccountUrl = this.configuration.ServerWithApiUrl; //+ "bankaccounts/";
+    this.bankAccountUrl = this.configuration.ServerWithApiUrl + "/transactions";
   }
 
   getAllBankAccounts() {
-    return this._http.get(this.bankaccountUrl).map(res => res.json());
+    return this._http.get(this.bankAccountUrl).map(res => res.json());
   }
 
   getBankaccount(id: string) {
-    return this._http.get(this.bankaccountUrl + id).map(res => res.json());
+    return this._http.get(this.bankAccountUrl + id).map(res => res.json());
   }
 
   private handleError(error: Response) {
