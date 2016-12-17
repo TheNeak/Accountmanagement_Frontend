@@ -1,11 +1,11 @@
 import {Injectable} from "@angular/core";
 import {Http, Response} from "@angular/http";
-import {Configuration} from "app.constants";
+import {Constants} from "./app.constants";
 import {Observable} from "rxjs/Rx";
 
 @Injectable()
 export class AppService {
-  private configuration = new Configuration();
+  private configuration = new Constants();
   private bankaccountUrl;
 
   constructor(private _http: Http) {
